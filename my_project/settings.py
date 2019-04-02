@@ -132,3 +132,7 @@ STATIC_URL = '/static/'
 # authentication configuratrion
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+
+# https://docs.djangoproject.com/en/2.2/topics/email/
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'send-emails')
